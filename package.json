@@ -19,5 +19,9 @@
   "homepage": "https://github.com/Amga20d/json_the_cat#readme",
   "dependencies": {
     "needle": "^3.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.1",
+    "mocha": "^11.0.1"
   }
 }

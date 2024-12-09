@@ -1,8 +1,7 @@
 const needle = require('needle');
-const breedName = process.argv[2];
 
 // Function to fetch breed data
-const fetchBreed = (breedName, callback) => {
+const fetchBreedDescription = (breedName, callback) => {
   const url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
 
   needle.get(url, (error, response) => {
@@ -20,12 +19,5 @@ const fetchBreed = (breedName, callback) => {
   });
 };
 
-// Example usage: Fetching the breed description
-fetchBreed(breedName, (error, description) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(description);
-  }
-});
 
+module.exports = { fetchBreedDescription };
